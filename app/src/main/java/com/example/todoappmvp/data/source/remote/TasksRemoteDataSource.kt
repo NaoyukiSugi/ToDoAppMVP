@@ -1,7 +1,8 @@
-package com.example.todoappmvp.data.source
+package com.example.todoappmvp.data.source.remote
 
 import android.os.Handler
 import com.example.todoappmvp.data.Task
+import com.example.todoappmvp.data.source.TasksDataSource
 
 class TasksRemoteDataSource(
     private val tasksServiceData: LinkedHashMap<String, Task> = linkedMapOf(
