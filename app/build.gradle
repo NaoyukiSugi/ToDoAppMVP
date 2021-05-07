@@ -31,6 +31,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    testOptions {
+        sourceSets {
+            test.java.srcDirs += 'src/test/java'
+            androidTest.java.srcDirs += 'src/androidTest/java'
+        }
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+    }
 }
 
 dependencies {
@@ -40,7 +50,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
+    testImplementation "junit:junit:$junit4Version"
+    testImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
@@ -62,4 +73,11 @@ dependencies {
 
     // kotlin test
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlinTestJunit"
+
+    // Robolectric
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+
+    // test core
+    testImplementation "androidx.test:core-ktx:$testCoreVersion"
+
 }
