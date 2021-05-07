@@ -1,4 +1,4 @@
-package com.example.todoappmvp.data.local
+package com.example.todoappmvp.data.source.local
 
 import androidx.room.*
 import com.example.todoappmvp.data.Task
