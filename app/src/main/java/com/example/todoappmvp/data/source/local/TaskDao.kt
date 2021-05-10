@@ -13,7 +13,7 @@ interface TaskDao {
     fun getTaskById(taskId: String): Task
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insetTask(task: Task)
+    fun insertTask(task: Task)
 
     @Update
     fun updateTask(task: Task): Int

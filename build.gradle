@@ -31,4 +31,5 @@ ext {
     junit5Version = "5.7.1"
     mockitoKotlinVersion = "3.1.0"
     kotlinTestJunit = "1.5.0"
+    coroutinesVersion = "1.5.0-RC"
 }
